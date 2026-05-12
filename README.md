@@ -1,2 +1,2 @@
-# tomodachi
-a tomodoro timer with a mini game
+# Pomodachi
+a pomodoro timer with a mini game
