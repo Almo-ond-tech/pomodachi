@@ -47,13 +47,20 @@ body {
     padding: 2rem;
 }
 
+.disclaimer {
+    font-size: 0.8rem;
+    font-weight: 300;
+    opacity: 0.7;
+    margin-bottom: 4rem;
+}
+
 .timer-wrapper {
     position: relative;
     display: inline-block;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
 }
 
-.progress-ring {
+/* .progress-ring {
     transform: rotate(-90deg);
     width: 300px;
     height: 300px;
@@ -89,9 +96,9 @@ body {
 
 .progress-ring-progress.break {
     stroke: #a4eeee;
-}
+} */
 
-.time-display {
+.timer-display {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -268,8 +275,12 @@ body {
     transform: translateX(0);
 }
 
+.notification.remove {
+    transform: translateX(100%);
+}
+
 @media (max-width: 768px) {
-    .progress-ring {
+    /* .progress-ring {
         width: 250px;
         height: 250px;
     }
@@ -281,7 +292,7 @@ body {
         cy: 125;
         stroke-dasharray: 754;
         stroke-dashoffset: 754;
-    }
+    } */
 
     .time {
         font-size: 2.5rem;
