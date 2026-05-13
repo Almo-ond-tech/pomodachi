@@ -6,14 +6,25 @@
     <meta name="description" content="This is a very simple website made by yours truly">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="timer.css">
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
 </head>
 
 
-<body>
+<body id="body">
     <nav>
         <div id="tasksToggle"><img src="hmiffy.png"  width="40"alt="Tasks toggle">Set Tasks</div>
+        <div class="game-link"><a href="game.html" target="_blank" rel="noopener noreferrer">Take A Break</a> </div>
+        <!-- Rounded switch -->
+        <div >
+            <label class="switch">
+                <input id="modeInput" type="checkbox">
+                
+                <span class="slider round"></span>
+            </label>
+            <p id="modeTitle">Dark Mode</p>
+        </div>
     </nav>
     
     <div class="background-grid"></div>

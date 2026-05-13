@@ -1,0 +1,182 @@
+.container {
+    text-align: center;
+    z-index: 2;
+    position: relative;
+    padding: 2rem;
+}
+
+.disclaimer {
+    font-size: 0.8rem;
+    font-weight: 300;
+    opacity: 0.7;
+    margin-bottom: 4rem;
+    margin-left: 7rem;
+    width: 50%;
+}
+
+.timer-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 4rem;
+}
+
+
+
+.timer-display {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.time {
+    font-size: 3.5rem;
+    font-weight: 200;
+    letter-spacing: 0.1rem;
+    margin-bottom: 0.5rem;
+    font-variant-numeric: tabular-nums;
+}
+
+.session-type {
+    font-size: 1rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+}
+
+.controls {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: left 0.3s ease;
+
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+.btn:hover {
+    border-color: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    border-color: #f4bbbb;
+    color: #f4bbbb;
+}
+
+.settings {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.setting-group {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    gap: 0.5rem;
+}
+
+.setting-label {
+    font-size: 0.8rem;
+    font-weight: 300;
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+.setting-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.setting-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.setting-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.setting-value {
+    font-size: 1rem;
+    font-weight: 300;
+    max-width: 3rem;
+    text-align: center;
+}
+
+.stats {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    opacity: 0.6;
+    flex-wrap: wrap;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 1.5rem;
+    font-weight: 200;
+    margin-bottom: 0.25rem;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+

@@ -55,9 +55,11 @@ function updateStats() {
 function showNotification(text){
     notificationText.textContent = text;
     notification.classList.add('show');
+    notification.classList.remove('remove');
     setTimeout(() => {
         console.log('hiding notification');
-        notification.classList.add('remove')
+        notification.classList.add('remove');
+        notification.classList.remove('show');
     }, 3000);
 }
 
@@ -236,3 +238,12 @@ const taskContainer = document.querySelector('.task-container');
 tasksToggle.addEventListener('click', () => {
     taskContainer.classList.toggle('task-show');
 })
+
+const modeInput = document.getElementById('modeInput');
+const body = document.getElementById('body');
+const modeTitle = document.getElementById('modeTitle');
+
+modeInput.addEventListener('change', () => { 
+    body.classList.toggle('light-mode', modeInput.checked);
+    modeTitle.textContent = modeInput.checked ? 'Light Mode' : 'Dark Mode';
+});
