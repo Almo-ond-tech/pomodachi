@@ -13,11 +13,29 @@
 
 <body>
     <nav>
-
+        <div id="tasksToggle"><img src="hmiffy.png"  width="40"alt="Tasks toggle">Set Tasks</div>
     </nav>
     
     <div class="background-grid"></div>
 
+    <div class="tasks-div" >
+        
+       
+       <div class="task-container">
+            <div id="taskTitle" class="task-title">
+            <h2>Tasks</h2>
+            <input type="text" id="taskInput" placeholder="Add a task...">
+            <span onclick= "newTask()" class="addBtn">Add</span>
+            </div>
+
+            <ul id="myTaskList">
+            <li class="checked">Get Started...</li>
+            <li>Finish!</li>
+            </ul>
+        </div>
+
+
+    </div>
 
     <div class="container">
         <div> <p class="disclaimer"> * Long break starts after every fourth session</p> </div>
