@@ -2,8 +2,10 @@
 A pomodoro timer with a mini game.
 
 Features:
+  
   Breaks: 
-    Include a short break that stats after every work session
+    Includes a short break that starts after every work session
+    A long break that starts after every fourth session
   
   Themes:
     Has a mint chocolate themed landing page
