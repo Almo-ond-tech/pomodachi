@@ -1,6 +1,6 @@
 
 # Pomodachi
-A pomodoro timer with a mini game.
+A pomodoro timer with two themes
 
 Features:
   
@@ -17,7 +17,7 @@ Features:
 
   
   Notification:
-    Give you a notification everytime you finish a work session or a break
+    Gives you a notification everytime you finish a work session or a break.
   
   Stats:
     Has stats about how many work sessions completed,
