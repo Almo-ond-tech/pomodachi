@@ -24,5 +24,5 @@ Features:
     and a streak.
 
 
-I made this pomodoro timer because I typically use them for studying but I wanted to have one that was more aesthetically pleasing to me. It lowkey kinda looks ugly because its so busy but I think its atleast better than staring at a boring timer.
+I made this pomodoro timer because I typically use them for studying but I wanted to have one that was more aesthetically pleasing to me. It lowkey kinda looks ugly because its so busy but I think its atleast better than staring at a boring timer. There was supposed to be a game on the website so you could take a break but I couldnt finish it in time so I removed the link to it TT. I do plan on fininshing the game and adding it soon.
     
