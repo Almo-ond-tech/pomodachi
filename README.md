@@ -14,7 +14,8 @@ Features:
   <img width="1920" height="1029"  alt="pomodoro-mintchoco" src="https://github.com/user-attachments/assets/888aacaf-8ff4-41b0-ad77-f955a9c4f903" />
 <img width="1920" height="1029" alt="pomodoro-neopolitan" src="https://github.com/user-attachments/assets/fe4bd4bd-3c1e-4ff3-8cf8-a8aadf7cb66d" />
 
-
+ Tasks:
+  Able to add a list of tasks you want to complete and cross off finished ones.
   
   Notification:
     Gives you a notification everytime you finish a work session or a break.
