@@ -6,7 +6,10 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #0f0f0f;
+    background: #673d3d;
+    background-image: url('imgs/mintchoco/mintchoco-bg.png');
+    background-size: 95vh;
+
     color: white;
     min-height: 100vh;
     display: flex;
@@ -16,85 +19,140 @@ body {
     position: relative;
 }
 
-.light-mode {
-    background: #f4f4f4;
-    color: #333;
-    
-    .game-link a {
-        color: #333;
-    }
-
-    .background-grid {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        opacity: 1;
-        background-image: linear-gradient(rgba(233, 108, 108, 0.9) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(184, 41, 41, 0.718) 1px, transparent 1px);
-        background-size: 40px 40px;
-        animation: gridMove 30s linear infinite;
-        pointer-events: none;
-    }
-    .btn {
-        background: rgba(177, 192, 77, 0.903);
-        border: 1px solid rgb(206, 62, 62);
-        color: rgb(225, 212, 212);
-    }
-    .btn:active {
-        border-color: #0f0ff8a4;
-        color: #c31fd5;
-    }
-
-
-
-    
-
-}
-
-.background-grid {
+.gradient-div {
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
-    opacity: 2;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-    background-size: 40px 40px;
-    animation: gridMove 30s linear infinite;
+    background: #3522226b;
     pointer-events: none;
+    z-index: 1;
+}
+
+.light-mode {
+
+    color: #4c261d;
+    background-image: url('imgs/neopolitan/neopolitan-bg.png');
+    background-size: 99vh;
+
+    .gradient-div {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #e2b9cc59;
+        pointer-events: none;
+        z-index: -1;
+
+    }
+
+    
+       
+    nav {
+        border-color: #4c261d;
+        background-color: #f9b3b38f;
+    }
+    
+
+    #tasksToggle {
+        background-image: linear-gradient(to bottom, #efc9e6, #f9f0d1);
+
+    }
+
+    #tasksToggle:hover {
+
+        background-image: linear-gradient(to bottom, #f9f0d1, #efbdb2);
+    }
+   .task-icon{
+        content:url(imgs/neopolitan/neopolitan-cat-icon-rb.png);
+    }
+
+    .game-link {
+      background-image: linear-gradient(to top, #efc9e6, #f9f0d1);
+    }
+    .game-link:hover {
+      background-image: linear-gradient(to top, #f9f0d1, #efbdb2);
+    }
+
+    .game-link a {
+        color:#4c261d ;
+    }
+
+    .task-title {
+        background-image: url(imgs/neopolitan/neopolitan-wings.png);
+    }
+
+    .task-title h2 {
+        color: #4c261d;
+        background-color: #fbd7b4a5;
+    }
+
+    input {
+        background-image: linear-gradient(to top, #efc9ef, #fcfaf9);
+    }
+
+    .addBtn:hover {
+        background-image: linear-gradient(to bottom, #5f4134, #fbd7b4);
+    }
+
+
+    ul li {
+    background: #ffe1cb;
+    }
+    
+    ul li.checked {
+        background: #4c261d;
+        color: #efc9e6;
+    }
+    ul li:hover:nth-child(odd) {
+    background: #b4918b;
+    }
+
+    ul li:nth-child(odd) {
+        background: #efc9e6;
+    }
+
+    ul li.checked::before {
+        color: #ffe1cb;
+    }
+
+     ul li:before {
+        color: #442e24;
+    }
+
+    ul li.checked:nth-child(odd) {
+        background-color: #e6a3be;
+    }
+    .notification {
+
+        background: #e6a3be6b;
+        border-color:rgb(180, 113, 83);
+        color: white;
+    }
+    
 
 }
 
-@keyframes gridMove {
-    0% {
-        transform: translate(0, 0);
-    }
-
-    100% {
-        transform: translate(40px, 40px);
-    }
-}
 
 nav {
     position: absolute;
     top: 20px;
     left: 300px;
     width: fit-content;
-    border-color: #ead5d5;
+    border-color: #442e24;
     border-width: 8px;
-    border-style: solid;
+    border-style: double;
     display: flex;
     text-align: center;
-    background-color: #149724;
+    background-color: #b3f9ed8f;
     padding: 10px 10px;
     justify-content: space-evenly;
     gap: 20px;
     z-index: 100;
 }
 
+#tasksToggle img {
+    width: 10vw;
+    margin: -30px;
+}
 
 
 
@@ -103,7 +161,7 @@ nav {
 
     font-size: 1.2rem;
     transition: color 0.3s ease;
-    background-color: #457d47;
+    background-image: linear-gradient(to bottom, #a4eaeab9, #5f4134);
     font-size: 1.5rem;
     padding: 10px 20px;
     display: flex;
@@ -114,12 +172,12 @@ nav {
 }
 
 .game-link a {
-    color: #e4d8c8;
+    color: #ffffff;
     text-decoration: none;
 }
 
 .game-link:hover {
-    background-color: #15410f;
+    background-color: #36ebf4;
     transform: scale(1);
 
 }
@@ -130,7 +188,6 @@ nav {
     display: inline-block;
     width: 60px;
     height: 30px;
-    background-color: #f44336;
 }
 
 /* Hide default HTML checkbox */
@@ -148,7 +205,7 @@ nav {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #4b1f1f;
+    background-color:#77ded2 ;
     -webkit-transition: .4s;
     transition: .4s;
 }
@@ -160,13 +217,13 @@ nav {
     width: 20px;
     left: 4px;
     bottom: 4px;
-    background-color: rgb(215, 38, 38);
+    background-color: #8b594e;
     -webkit-transition: .4s;
     transition: .4s;
 }
 
 input:checked+.slider {
-    background-color: #2196F3;
+    background-image: linear-gradient(to right, #723b2d, #efc9e6, #f9f0d1);
 }
 
 input:focus+.slider {
@@ -177,6 +234,7 @@ input:checked+.slider:before {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
     transform: translateX(26px);
+    background-color: #ffffff;
 }
 
 /* Rounded sliders */
@@ -185,12 +243,14 @@ input:checked+.slider:before {
 }
 
 .slider.round:before {
-    border-radius: 30%;
+    border-radius: 50%;
 }
 
 .tasks-div {
     font-size: 2rem;
-    margin-bottom: 15rem
+    margin-bottom: 5rem;
+    margin-left: 10rem;
+    z-index: 10;
 }
 
 #tasksToggle {
@@ -199,13 +259,18 @@ input:checked+.slider:before {
     display: flex;
     align-items: center;
     gap: 10px;
-    background-color: #925753;
+    background-image: linear-gradient(to top, #a4eaeab9, #5f4134);
     transform: scale(0.9);
     transition: transform 0.15s ease-in-out;
 }
 
+.task-icon{
+    content:url(imgs/mintchoco/mint-chococat-rb.png);
+}
+
+
 #tasksToggle:hover {
-    background-color: #f44336;
+    background-color: #36ebf4;
     transform: scale(1);
 
 }
@@ -237,7 +302,7 @@ ul li {
     cursor: pointer;
     position: relative;
     padding: 12px 8px 12px 40px;
-    background: #ead5d5;
+    background: #8b594e;
     font-size: 18px;
     transition: 0.2s;
     list-style-type: none;
@@ -253,16 +318,16 @@ ul li {
 
 
 ul li:nth-child(odd) {
-    background: #f9f9f9;
+    background: #94c6b5;
 }
 
 ul li:hover {
-    background: #ddd;
+    background: #b4918b;
 }
 
 ul li.checked {
-    background: #888;
-    color: #fff;
+    background: #62bbb5;
+    color: #4b1f1f;
     text-decoration: line-through;
 }
 
@@ -270,7 +335,7 @@ ul li.checked {
 ul li.checked::before {
     content: "\2605";
     position: absolute;
-    color: aqua;
+    color: rgb(180, 232, 223);
     font-size: 20px;
     left: 10px;
 }
@@ -278,7 +343,7 @@ ul li.checked::before {
 ul li::before {
     content: "\2606";
     position: absolute;
-    color: aqua;
+    color: rgb(255, 255, 255);
     font-size: 20px;
     left: 10px;
     pointer-events: none;
@@ -297,22 +362,30 @@ li {
 }
 
 .close:hover {
-    background-color: #f44336;
+    background-color: #99dbda;
     color: white;
 }
 
 /* Style the header */
 .task-title {
-    background-color: #f44336;
+    background-color: #5f4134;
+    background-image: url(imgs/mintchoco/mintchoco-wings.png);
+    background-size: 220px;
+    background-position: bottom -40px right 9px;
     padding: 8px 20px 20px;
-    color: white;
+    color: #f7f8f8;
     text-align: center;
 }
 
 .task-title h2 {
     font-size: 2rem;
     padding: 10px 0;
+    border-radius: 10px;
+    background-color: #4a3120ed;
+    background-size: 10px;
+
 }
+
 
 /* Clear floats after the header */
 .task-title:after {
@@ -330,6 +403,8 @@ input {
     padding: 10px;
     float: left;
     font-size: 16px;
+    background-image: linear-gradient(to top, #a4eaeab9, #fcfaf9);
+
 
 }
 
@@ -337,8 +412,9 @@ input {
 .addBtn {
     padding: 10px;
     width: 25%;
-    background: #d9d9d9;
-    color: #555;
+    background-color: #5f4134;
+
+    color: #f0efef;
     float: left;
     text-align: center;
     font-size: 16px;
@@ -348,7 +424,7 @@ input {
 }
 
 .addBtn:hover {
-    background-color: #bbb;
+    background-image: linear-gradient(to bottom, #5f4134, rgb(180, 113, 83));
 }
 
 
@@ -358,8 +434,8 @@ input {
     top: 2rem;
     right: 2rem;
 
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: #7fb7b587;
+    border: 1px solid #7fb7b5;
     border-radius: 8px;
     padding: 1rem 1.5rem;
     backdrop-filter: blur(10px);
@@ -415,7 +491,6 @@ input {
         display: inline-block;
         width: 1.5rem;
         height: 3rem;
-        background-color: #f4ce36;
     }
 
 
@@ -427,7 +502,6 @@ input {
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: #4b1f1f;
         -webkit-transition: .4s;
         transition: .4s;
     }
@@ -439,18 +513,10 @@ input {
         width: 0.9rem;
         left: 3.5px;
         bottom: 30px;
-        background-color: rgb(215, 38, 85);
         -webkit-transition: .4s;
         transition: .4s;
     }
 
-    input:checked+.slider {
-        background-color: #2196F3;
-    }
-
-    input:focus+.slider {
-        box-shadow: 0 0 1px #2d600b;
-    }
 
     input:checked+.slider:before {
         -webkit-transform: translateY(26px);
@@ -459,17 +525,11 @@ input {
     }
 
     /* Rounded sliders */
-    .slider.round {
-        border-radius: 10px;
-    }
-
-    .slider.round:before {
-        border-radius: 30%;
-    }
 
     .tasks-div {
-        font-size: 2rem;
-        margin-bottom: 15rem
+        
+        margin-left: 2rem;
+       
     }
 
 
@@ -477,13 +537,13 @@ input {
         font-size: 1.25rem;
         width: inherit;
 
+
     }
 
     .tasks-div {
         font-size: 0.9rem;
         size: 2rem;
-        margin-bottom: 22rem;
-        margin-right: -3rem;
+        margin-bottom: 15rem;
         position: relative;
         top: 60px;
 
@@ -508,8 +568,9 @@ input {
     .addBtn {
         padding: 10px;
         width: 25%;
-        background: #d9d9d9;
-        color: #555;
+        background-color: #5f4134;
+
+        color: #f0efef;
         float: left;
         text-align: center;
         font-size: 12px;
@@ -526,7 +587,7 @@ input {
     .disclaimer {
         margin-bottom: 3rem;
         margin-left: 4rem;
-        
+
     }
 
 
