@@ -22,3 +22,7 @@ Features:
     Has stats about how many work sessions completed,
     total time spent working,
     and a streak.
+
+
+I made this pomodoro timer because I typically use them for studying but I wanted to have one that was more aesthetically pleasing to me. It lowkey kinda looks ugly because its so busy but I think its atleast better than staring at a boring timer.
+    
