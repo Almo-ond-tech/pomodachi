@@ -18,67 +18,51 @@ body {
 }
 
 .light-mode {
-    background: #f4f4f4;
-    color: #333;
     
-    .game-link a {
-        color: #333;
+
+    .pomodoro {
+        background-image: linear-gradient(to bottom, #efc9e6, #f9f0d1);
+
     }
+
+   .pomodoro:hover {
+
+        background-image: linear-gradient(to bottom, #f9f0d1, #efbdb2);
+    }
+
     .pomodoro a {
-        color: #333;
+        color: #4c261d;
     }
 
-    .background-grid {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        opacity: 1;
-        background-image: linear-gradient(rgba(233, 108, 108, 0.9) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(184, 41, 41, 0.718) 1px, transparent 1px);
-        background-size: 40px 40px;
-        animation: gridMove 30s linear infinite;
-        pointer-events: none;
-    }
-    .btn {
-        background: rgba(177, 192, 77, 0.903);
-        border: 1px solid rgb(206, 62, 62);
-        color: rgb(225, 212, 212);
-    }
-    .btn:active {
-        border-color: #0f0ff8a4;
-        color: #c31fd5;
-    }
 
 
 }
 
-.background-grid {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 2;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-    background-size: 40px 40px;
-    animation: gridMove 30s linear infinite;
-    pointer-events: none;
+.pomodoro img {
+    width: 10vw;
+    margin: -30px;
+}
 
+.pomodoro {
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-image: linear-gradient(to top, #a4eaeab9, #5f4134);
+    transform: scale(0.9);
+    transition: transform 0.15s ease-in-out;
+}
+
+
+.pomodoro:hover {
+    background-color: #36ebf4;
+    transform: scale(1);
 
 }
 
-@keyframes gridMove {
-    0% {
-        transform: translate(0, 0);
-    }
 
-    100% {
-        transform: translate(40px, 40px);
-    }
-}
+
 
 
 
@@ -87,12 +71,12 @@ nav {
     top: 20px;
     left: 300px;
     width: fit-content;
-    border-color: #ead5d5;
+    border-color: #442e24;
     border-width: 8px;
-    border-style: solid;
+    border-style: double;
     display: flex;
     text-align: center;
-    background-color: #149724;
+    background-color: #b3f9ed8f;
     padding: 10px 10px;
     justify-content: space-evenly;
     gap: 20px;
@@ -152,7 +136,6 @@ nav {
     display: inline-block;
     width: 60px;
     height: 30px;
-    background-color: #f44336;
 }
 
 /* Hide default HTML checkbox */
@@ -182,14 +165,10 @@ nav {
     width: 20px;
     left: 4px;
     bottom: 4px;
-    background-color: rgb(215, 38, 38);
     -webkit-transition: .4s;
     transition: .4s;
 }
 
-input:checked+.slider {
-    background-color: #2196F3;
-}
 
 input:focus+.slider {
     box-shadow: 0 0 1px #8c8d48;
@@ -210,88 +189,3 @@ input:checked+.slider:before {
     border-radius: 30%;
 }
 
-@media (max-width: 768px) {
-
-    nav {
-        position: absolute;
-        top: 20px;
-        left: 20px;
-        width: 60vw;
-        height: fit-content;
-        z-index: 10;
-        text-align: center;
-        font-size: 0.8rem;
-    }  
-    
-    .game-link {
-        
-        
-        font-size: 1.25rem;
-        width: inherit;
-
-    }
-
-    .pomodoro {
-       font-size: 1.25rem;
-        width: inherit;
-
-    }
-
-     .switch {
-        position: relative;
-        display: inline-block;
-        width: 1.5rem;
-        height: 3rem;
-        background-color: #f4ce36;
-    }
-
-
-    /* The slider */
-    .slider {
-        position: absolute;
-        cursor: pointer;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: #4b1f1f;
-        -webkit-transition: .4s;
-        transition: .4s;
-    }
-
-    .slider:before {
-        position: absolute;
-        content: "";
-        height: 13px;
-        width: 0.9rem;
-        left: 3.5px;
-        bottom: 30px;
-        background-color: rgb(215, 38, 85);
-        -webkit-transition: .4s;
-        transition: .4s;
-    }
-
-    input:checked+.slider {
-        background-color: #2196F3;
-    }
-
-    input:focus+.slider {
-        box-shadow: 0 0 1px #2d600b;
-    }
-
-    input:checked+.slider:before {
-        -webkit-transform: translateY(26px);
-        -ms-transform: translateY(26px);
-        transform: translateY(26px);
-    }
-
-    /* Rounded sliders */
-    .slider.round {
-        border-radius: 10px;
-    }
-
-    .slider.round:before {
-        border-radius: 30%;
-    }
-     
-}
